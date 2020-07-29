@@ -11,7 +11,7 @@ import javax.security.auth.login.LoginException;
 
 public class Main{
     public static void main(String[] args) throws LoginException, InterruptedException {
-        JDA jda = JDABuilder.createDefault("NzI5NzQxNTg4MDc0NDYzMjM0.XwPfcQ.7jSAjTHVTEq9Xq5kfqBdG4-E9KY")
+        JDA jda = JDABuilder.createDefault("Token")
                 .addEventListeners(new BuildRuneController(), new UsuarioController()).setActivity(Activity.watching("TV"))
                 .build();
         jda.awaitReady();
