@@ -7,12 +7,10 @@ import java.sql.*;
 public class ConnectionDAO {
 
     public static JdbcRowSet getRowSetConnection(){
-        //String url = "jdbc:mysql://localhost/usuario?useTimezone=true&serverTimezone=UTC";
-        //String user = "root";
-        //String password = "samuel2011";
+        //Free MysqlHost
         String url = "jdbc:mysql://sql10.freemysqlhosting.net/sql10356689?useTimezone=true&serverTimezone=UTC";
         String user = "sql10356689";
-        String password = "LmfY2uGgSh";
+        String password = "******";
 
         try {
             JdbcRowSet jdbcrowset = RowSetProvider.newFactory().createJdbcRowSet();
@@ -21,7 +19,7 @@ public class ConnectionDAO {
             jdbcrowset.setPassword(password);
             return jdbcrowset;
         } catch (SQLException throwables) {
-            System.out.println("Erro é meu peru!");
+            throwables.printStackTrace();            
         }
         return null;
     }
@@ -32,7 +30,7 @@ public class ConnectionDAO {
                 jrs.close();
             }
         } catch (SQLException throwables) {
-            System.out.println("Deus é god");
+            throwables.printStackTrace();
         }
     }
 }
